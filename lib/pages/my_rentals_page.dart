@@ -162,6 +162,7 @@ class _MyRentalsPageState extends State<MyRentalsPage> {
     final today = DateUtils.dateOnly(DateTime.now());
     final daysLeft =
         DateUtils.dateOnly(rental.returnDate).difference(today).inDays;
+    //final daysLeft = -2; (연체 색 보고싶으면 이 코드 실행)
     final due = _dueInfo(status, daysLeft);
 
     // 반납이 임박했거나 연체이면 카드 테두리로도 눈에 띄게 표시
